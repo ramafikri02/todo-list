@@ -34,9 +34,8 @@ export default new Vuex.Store({
       state.todos = state.todos.filter(todo=>todo.id != id);
     },
     updatetodo(state, todo) {
-      let index = state.todos.findIndex(t=>t.id == todo.id);
-      console.log(index);
+      let index = state.todos.findIndex(t => t.id == todo.id);
     },
   },
-  modules: {}
+  modules: {},
 });

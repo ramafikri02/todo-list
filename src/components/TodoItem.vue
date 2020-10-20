@@ -12,7 +12,7 @@
                     <font-awesome-icon icon="save" v-else />
                 </b-button>
                 <b-button variant="danger" @click="deleteTodo(todo.id)">
-                    <font-awesome-icon icon="eraser" />
+                    <font-awesome-icon icon="trash" />
                 </b-button>
             </div>
         </div>
