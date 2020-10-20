@@ -1,9 +1,8 @@
 <template>
 <div>
     <div class="row">
-        <h3>Input Here</h3>
-        <b-input-group class="mt-3 mb-5">
-            <b-form-input v-model="todoText"></b-form-input>
+        <b-input-group class="mt-3 mb-3 mx-3">
+            <b-form-input v-model="todoText" placeholder="Type here..."></b-form-input>
             <b-input-group-append>
                 <b-button variant="info" @click="addTodoI">Add Item</b-button>
             </b-input-group-append>

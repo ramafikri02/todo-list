@@ -1,14 +1,19 @@
 <template>
 <div>
-    <div class="row my-2">
+    <div class="row my-2 todo-item">
         <div class="col-md-6">
-            <h3 v-if="!editing" style="float:left;">{{todo.title}}</h3>
+            <h4 v-if="!editing" style="float:left;">{{todo.title}}</h4>
             <b-form-input v-model="todoText" v-else></b-form-input>
         </div>
         <div class="col-md-6">
-            <div>
-                <b-button variant="success mx-2" @click="updateTodoI(todo)">{{editing?'Update':'Edit'}}</b-button>
-                <b-button variant="danger" @click="deleteTodo(todo.id)">Delete</b-button>
+            <div style="float:right;">
+                <b-button variant="success mx-2" @click="updateTodoI(todo)">
+                    <font-awesome-icon icon="edit" v-if="!editing" />
+                    <font-awesome-icon icon="save" v-else />
+                </b-button>
+                <b-button variant="danger" @click="deleteTodo(todo.id)">
+                    <font-awesome-icon icon="eraser" />
+                </b-button>
             </div>
         </div>
     </div>
